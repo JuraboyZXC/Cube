@@ -1,0 +1,21 @@
+@keyframes cube360 {
+    0% {
+        transform: rotateX(340deg) rotateY(40deg);
+    }
+
+    25% {
+        transform: rotateX(130deg) rotateY(130deg);
+    }
+
+    50% {
+        transform: rotateX(220deg) rotateY(220deg);
+    }
+
+    75% {
+        transform: rotateX(310deg) rotateY(310deg);
+    }
+
+    100% {
+        transform: rotateX(360deg) rotateY(40deg);
+    }
+}

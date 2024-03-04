@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.conteiner {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    background-color: darkslateblue;
+}
+
+.conteiner .cube {
+    width: 300px;
+    height: 300px;
+    transform: rotateX(340deg) rotateY(40deg);
+    position: relative;
+    transform-style: preserve-3d;
+    animation-name: cube360;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.conteiner .cube .side {
+    width: 100%;
+    height: 100%;
+    background-color: #2b19576d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* border: 1px solid white; */
+    display: grid;
+    grid-template-columns: 90px 90px 90px;
+    grid-template-rows: 90px 90px 90px;
+    gap: 10px;
+}
+
+.grid {
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.one {
+    margin-top: 10px;
+}
+
+.front {
+    transform: translate3d(0, 0, 150px);
+    background-color: black!important;
+    display: flex;
+    justify-content: center;
+}
+
+
+.back {
+    transform: translate3d(0, 0, -150px);
+    background-color: black!important;
+    display: flex;
+    justify-content: center;
+}
+
+.left {
+    transform: translate3d(150px, 0 ,0) rotateY(90deg);
+    background-color: black!important;
+    display: flex;
+    justify-content: center;
+}
+
+.right {
+    transform: translate3d(-150px, 0, 0) rotateY(90deg);
+    background-color: black!important;
+    display: flex;
+    justify-content: center;
+}
+
+.top {
+    transform: translateY(-150px) rotateX(90deg);
+    background-color: black!important;
+    display: flex;
+    justify-content: center;
+}
+
+.buttom {
+    transform: translateY(150px) rotateX(90deg);
+    background-color: black!important;
+    display: flex;
+    justify-content: center;
+}
+
+.front .grid {
+    background-color: red;
+}
+
+.back .grid {
+    background-color: orange;
+}
+
+.left .grid {
+    background-color: blue;
+}
+
+.right .grid {
+    background-color: green;
+}
+
+.top .grid {
+    background-color: white;
+}
+
+.buttom .grid {
+    background-color: yellow;
+}
